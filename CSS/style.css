@@ -17,8 +17,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .main-container {
@@ -67,8 +67,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 79px;
     margin-bottom: 30px;
+    margin-top: 0px;
 }
 
 .navbar {
@@ -90,12 +90,22 @@ header {
 .menu {
     display: flex;
     align-items: flex-end;
-    height: 35px;
     padding-right: 50px;
     padding-left: 50px;
+    margin: 0;
     gap: 68px;
     list-style: none;
     font-size: 16px;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+    position: relative;
 }
 
 .menu li:hover{
@@ -124,11 +134,17 @@ a {
     display: flex;
     flex-direction: column;
     gap: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
-.title {
+.title h1 {
     gap: 8px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.intro p {
+    margin: 0;
 }
 
 /****** Search Bar ***********/
@@ -199,10 +215,9 @@ a {
     max-width: 758px;
     height: 50px;
     gap: 15px;
-    margin-bottom: 35px;
 }
 
-.filters .h2 {
+.filters h2 {
     font-size: 18px;
     font-weight: 700;
 }
@@ -446,6 +461,10 @@ font-size: 16px;
 
 /* filters - tablette */
 
+.filters h2 {
+    margin-top: 0;
+  }
+
   .filters {
     flex-direction: column;
     align-items: start;
@@ -464,7 +483,6 @@ font-size: 16px;
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
     }
 
     .populaires-cards {
@@ -506,8 +524,6 @@ font-size: 16px;
     .footer {
     background-color: #F2F2F2;
     height: auto;
-    width: 100%;
-    margin: 30px 0px 0px 0px;
 }
     }
 
@@ -546,6 +562,7 @@ font-size: 16px;
     align-items: center;
     list-style: none;
     position: relative;
+    padding-bottom: 10px;
   }
 
 .menu li::after {
@@ -569,8 +586,11 @@ font-size: 16px;
 /* Main container - mobile*/
 .main-container {
     padding: 0px 20px;
-    margin-top: 35px;
     }
+
+.title h1 {
+    margin-top: 0;
+}
 
 /* Search Bar - mobile */
 
@@ -597,10 +617,14 @@ font-size: 16px;
 
 /* Filters - mobile */
 
+.filters h2 {
+    margin-top: 0;
+  }
+
   .filter {
     font-size: 14px;
-    padding: 14px 20px;
     flex: 1 1 48%;
+    margin-top: 0%;
   }
 
   .filters-list {
@@ -612,6 +636,13 @@ font-size: 16px;
 
 .hebergements-and-populaires {
         flex-direction: column-reverse;
+        gap: 0px;
+    }
+
+.populaires {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
     }
 
 .populaires-cards {
@@ -621,15 +652,24 @@ font-size: 16px;
 
 .populaires-cards .card {
         width: 100%;
+        margin-top: 15px;
     }
 
 .hebergements-and-populaires .hebergements {
         background-color: white;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+.hebergements-title {
+        margin-top: 0;
     }
 
 .hebergements-cards {
         flex-direction: column;
         display: block;
+        margin-top: 0;
     }
 
 .hebergements-cards .card {
@@ -644,8 +684,10 @@ font-size: 16px;
 /* Activities - mobile */
 
 .activites {
-    width: 100%;
-  }
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    }
 
   .activites-cards {
    flex-direction: column;
